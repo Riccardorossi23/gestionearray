@@ -11,12 +11,12 @@ namespace array19
     {
         static void Main(string[] args)
         {
-            int[] array = new int[5];
+            int[] array = new int[6];
 
-            GestioneArray.Leggiarray(array);
-            GestioneArray.StampaArray(array);
-            int[] array1 = GestioneArray.CopiaArray(array);
-            GestioneArray.StampaArray(array1);
+           //GestioneArray.leggi(array);
+            //GestioneArray.stampa(array);
+            int[] array1 = GestioneArray.copia(array);
+            GestioneArray.stampa(array1);
             Console.ReadLine();
         }
     }

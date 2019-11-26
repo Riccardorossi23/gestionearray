@@ -8,7 +8,7 @@ namespace Gestionearray1
 {
     public class GestioneArray
     {
-        public static void Leggiarray(int[] array)
+        public static void leggi(int[] array)
         {
             Console.WriteLine("inserici valori array :");
             for (int i = 0; i < array.Length; i++)
@@ -17,7 +17,7 @@ namespace Gestionearray1
                 array[i] = int.Parse(Console.ReadLine());
             }
         }
-        public static void StampaArray(int[] array)
+        public static void stampa(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -25,7 +25,7 @@ namespace Gestionearray1
                 Console.WriteLine($"array{i}={n}");
             }
         }
-        public static int[] CopiaArray(int[] array)
+        public static int[] copia(int[] array)
         {
             int[] array1 = new int[array.Length];
             for (int i = 0; i < array.Length; i++)
@@ -34,18 +34,18 @@ namespace Gestionearray1
             }
             return array1;
         }
-        public static bool RicercaArray(int[] array, int elemento)
+        public static bool ricerca(int[] array, int element)
         {
             bool ricerca = false;
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] == elemento)
+                if (array[i] == element)
                     ricerca = true;
             }
             return ricerca;
         }
 
-        public static bool Uguali(int[] a, int[] b)
+        public static bool uguali(int[] a, int[] b)
         {
             if (a.Length != b.Length)
             {
@@ -58,27 +58,27 @@ namespace Gestionearray1
                 }
             return true;
         }
-        public static int CercaMax(int[] array)
+        public static int CercaMassimo(int[] array)
         {
-            int max = int.MinValue;
+            int massimo = int.MinValue;
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] > max)
-                    max = array[i];
+                if (massimo>array[i])
+                    massimo = array[i];
             }
-            return max;
+            return massimo;
         }
-        public static int CercaMin(int[] array)
+        public static int cercaMinimo(int[] array)
         {
-            int min = int.MaxValue;
+            int minimo = int.MaxValue;
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] < min)
-                    min = array[i];
+                if (array[i] < minimo)
+                    minimo = array[i];
             }
-            return min;
+            return minimo;
         }
-        public static bool Crescente(int[] array)
+        public static bool crescente(int[] array)
         {
             bool risposta = true;
             for (int i = 1; i < array.Length; i++)
@@ -90,7 +90,7 @@ namespace Gestionearray1
             }
             return risposta;
         }
-        public static bool Descrescente(int[] array)
+        public static bool descrescente(int[] array)
         {
             bool risposta = true;
             for (int i = 1; i > array.Length; i++)
@@ -102,27 +102,14 @@ namespace Gestionearray1
             }
             return risposta;
         }
-        public static void RiempiArray(int[] array)
+        public static void riempi(int[] array)
         {
             Random random = new Random();
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = random.Next(); 
+                array[i] = random.Next();
             }
 
-        }
-        public static int[] UnisciArray(int[] array, int[] array1)
-        {
-            int[] Merge = new int[array.Length + array1.Length];
-            for (int i = 0; i < array.Length; i++)
-            {
-                Merge[i] = array[i];
-            }
-            for (int i = array.Length + 1; i < Merge.Length; i++)
-            {
-                Merge[i] = array1[i - array1.Length];
-            }
-            return Merge;
         }
     }
 }
