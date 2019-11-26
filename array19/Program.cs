@@ -16,7 +16,7 @@ namespace array19
             GestioneArray.Leggiarray(array);
             GestioneArray.StampaArray(array);
             int[] array1 = GestioneArray.CopiaArray(array);
-            GestioneArray.StampaArray(array2);
+            GestioneArray.StampaArray(array1);
             Console.ReadLine();
         }
     }

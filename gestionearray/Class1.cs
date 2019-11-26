@@ -107,20 +107,20 @@ namespace Gestionearray1
             Random random = new Random();
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = random.Next(); ;
+                array[i] = random.Next(); 
             }
 
         }
-        public static int[] UnisciArray(int[] array1, int[] array2)
+        public static int[] UnisciArray(int[] array, int[] array1)
         {
-            int[] Merge = new int[array1.Length + array2.Length];
-            for (int i = 0; i < array1.Length; i++)
+            int[] Merge = new int[array.Length + array1.Length];
+            for (int i = 0; i < array.Length; i++)
             {
-                Merge[i] = array1[i];
+                Merge[i] = array[i];
             }
-            for (int i = array1.Length + 1; i < Merge.Length; i++)
+            for (int i = array.Length + 1; i < Merge.Length; i++)
             {
-                Merge[i] = array2[i - array1.Length];
+                Merge[i] = array1[i - array1.Length];
             }
             return Merge;
         }
