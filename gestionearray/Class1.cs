@@ -8,57 +8,121 @@ namespace Gestionearray1
 {
     public class GestioneArray
     {
-        public static void leggiarray(int[]array)
+        public static void Leggiarray(int[] array)
         {
             Console.WriteLine("inserici valori array :");
-            for(int i=0;array.Length;i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine($"/tinserisci elemento{i}:");
+                Console.WriteLine($"/t inserisci elemento{i}:");
                 array[i] = int.Parse(Console.ReadLine());
             }
         }
-        public static void StampaArray(int[]array)
+        public static void StampaArray(int[] array)
         {
-            for(int i=0;i<array.Length;i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 int n = array[i];
                 Console.WriteLine($"array{i}={n}");
             }
         }
-        public static bool uguali(int[]a,int[]b)
+        public static int[] CopiaArray(int[] array)
+        {
+            int[] array1 = new int[array.Length];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array1[i] = array[i];
+            }
+            return array1;
+        }
+        public static bool RicercaArray(int[] array, int elemento)
+        {
+            bool ricerca = false;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == elemento)
+                    ricerca = true;
+            }
+            return ricerca;
+        }
+
+        public static bool Uguali(int[] a, int[] b)
         {
             if (a.Length != b.Length)
             {
                 return false;
             }
-            for(int i=0;i<a.Length;i++)
-                if(a[i]!=b[i])
+            for (int i = 0; i < a.Length; i++)
+                if (a[i] != b[i])
                 {
                     return false;
                 }
             return true;
         }
-        public static bool crescente(int[]array)
+        public static int CercaMax(int[] array)
         {
-            for(int i=1;i<array.Length;i++)
+            int max = int.MinValue;
+            for (int i = 0; i < array.Length; i++)
             {
-                if(array[i]<array[i-1])
-                {
-                    return false;
-                }
-                return true;
+                if (array[i] > max)
+                    max = array[i];
             }
+            return max;
         }
-        public static bool descrescente(int[]array)
+        public static int CercaMin(int[] array)
         {
-            for(int i=1;i>array.Length;i--)
+            int min = int.MaxValue;
+            for (int i = 0; i < array.Length; i++)
             {
-                if(array[i]>array[i-1])
-                {
-                    return false;
-                }
-                return true;
+                if (array[i] < min)
+                    min = array[i];
             }
+            return min;
+        }
+        public static bool Crescente(int[] array)
+        {
+            bool risposta = true;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] <= array[i - 1])
+
+                    risposta = false;
+
+            }
+            return risposta;
+        }
+        public static bool Descrescente(int[] array)
+        {
+            bool risposta = true;
+            for (int i = 1; i > array.Length; i++)
+            {
+                if (array[i] > array[i - 1])
+                    risposta = false;
+
+
+            }
+            return risposta;
+        }
+        public static void RiempiArray(int[] array)
+        {
+            Random random = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next(); ;
+            }
+
+        }
+        public static int[] UnisciArray(int[] array1, int[] array2)
+        {
+            int[] Merge = new int[array1.Length + array2.Length];
+            for (int i = 0; i < array1.Length; i++)
+            {
+                Merge[i] = array1[i];
+            }
+            for (int i = array1.Length + 1; i < Merge.Length; i++)
+            {
+                Merge[i] = array2[i - array1.Length];
+            }
+            return Merge;
         }
     }
 }

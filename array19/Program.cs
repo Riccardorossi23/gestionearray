@@ -11,14 +11,13 @@ namespace array19
     {
         static void Main(string[] args)
         {
-            //int[] a = (3,4,3);
-            //int[] b = (3,4,3);
-           // Console.WriteLine("GestioneArray.uguali(a+b)");
-            //GestioneArray.leggiarray(a);
-            //GestioneArray.StampaArray(a);
-            //GestioneArray.crescente(a);
-            //GestioneArray.decrescente(a);
-            
+            int[] array = new int[5];
+
+            GestioneArray.Leggiarray(array);
+            GestioneArray.StampaArray(array);
+            int[] array1 = GestioneArray.CopiaArray(array);
+            GestioneArray.StampaArray(array2);
+            Console.ReadLine();
         }
     }
 }
