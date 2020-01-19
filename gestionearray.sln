@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestionearray", "gestionearray\gestionearray.csproj", "{5A4F2D6B-9B5C-43FB-89AC-8E3EE35803A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "array19", "array19\array19.csproj", "{9196CBE0-BDC1-4B87-BCEE-438153501224}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "array", "array19\array.csproj", "{9196CBE0-BDC1-4B87-BCEE-438153501224}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5A4F2D6B-9B5C-43FB-89AC-8E3EE35803A0} = {5A4F2D6B-9B5C-43FB-89AC-8E3EE35803A0}
 	EndProjectSection

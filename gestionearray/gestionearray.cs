@@ -13,7 +13,7 @@ namespace Gestionearray1
             Console.WriteLine("inserici valori array :");
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine($"/t inserisci elemento{i}:");
+                Console.WriteLine($" inserisci elemento{i}:");
                 array[i] = int.Parse(Console.ReadLine());
             }
         }
@@ -24,6 +24,7 @@ namespace Gestionearray1
                 int n = array[i];
                 Console.WriteLine($"array{i}={n}");
             }
+            Console.WriteLine();
         }
         public static int[] copia(int[] array)
         {
@@ -50,14 +51,20 @@ namespace Gestionearray1
             if (a.Length != b.Length)
             {
                 return false;
+               
             }
+            bool risultato = true;
             for (int i = 0; i < a.Length; i++)
+            {
                 if (a[i] != b[i])
                 {
-                    return false;
+                    risultato= false;
                 }
-            return true;
+            }
+            return risultato;
         }
+           
+        
         public static int CercaMassimo(int[] array)
         {
             int massimo = int.MinValue;
@@ -109,6 +116,20 @@ namespace Gestionearray1
             {
                 array[i] = random.Next();
             }
+
+        }
+        public static int[] UnisciArray(int[] array1, int[] array2)
+        {
+            int[] Merge = new int[array1.Length + array2.Length];
+            for (int i = 0; i < array1.Length; i++)
+            {
+                Merge[i] = array1[i];
+            }
+            for (int i = array1.Length + 1; i < Merge.Length; i++)
+            {
+                Merge[i] = array2[i - array1.Length];
+            }
+            return Merge;
 
         }
     }

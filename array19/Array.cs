@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace array19
 {
-    class Program
+    class Array
     {
         static void Main(string[] args)
         {
-            int[] array = new int[6];
+            int[] array = new int[5];
 
-           //GestioneArray.leggi(array);
+            //GestioneArray.leggi(array);
             //GestioneArray.stampa(array);
-            int[] array1 = GestioneArray.copia(array);
-            GestioneArray.stampa(array1);
+            //int[] array1 = GestioneArray.copia(array);
+            //GestioneArray.stampa(array1);
             Console.ReadLine();
         }
     }
